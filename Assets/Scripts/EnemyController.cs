@@ -6,12 +6,12 @@ using UnityEngine.UIElements;
 
 public class EnemyController : MonoBehaviour
 {
+    private CubeController _controller;
+    private float _speed = 2;
+    
     [SerializeField]
     private EnemyIndicator _enemyIndicator;
     
-    private CubeController _controller;
-    private float _speed = 2;
-
     // Start is called before the first frame update
     private void Start()
     {

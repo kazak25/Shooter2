@@ -984,8 +984,9 @@ GameObject:
   - component: {fileID: 867282998}
   - component: {fileID: 867282997}
   - component: {fileID: 867282996}
-  - component: {fileID: 867282995}
   - component: {fileID: 867282999}
+  - component: {fileID: 867283000}
+  - component: {fileID: 867283001}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1013,19 +1014,6 @@ RectTransform:
   m_AnchoredPosition: {x: -451.48947, y: 191.7021}
   m_SizeDelta: {x: -902.9803, y: -383.3982}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &867282995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 867282993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d90daf6c20a7d54b80cb46e0d930f5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _imagePrefab: {fileID: 7994304172727842965, guid: 8693cb1a34b58fb43a50d1e65cbf526e, type: 3}
 --- !u!114 &867282996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1114,6 +1102,46 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &867283000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867282993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b9151f886eee6a429cf3cf3775ebbd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shootEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1157773867}
+        m_TargetAssemblyTypeName: BulletIndicator, Assembly-CSharp
+        m_MethodName: Shoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &867283001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867282993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d90daf6c20a7d54b80cb46e0d930f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _imagePrefab: {fileID: 7994304172727842965, guid: 8693cb1a34b58fb43a50d1e65cbf526e, type: 3}
 --- !u!1 &880340742
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,6 +1492,7 @@ GameObject:
   - component: {fileID: 1157773864}
   - component: {fileID: 1157773866}
   - component: {fileID: 1157773865}
+  - component: {fileID: 1157773867}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1588,6 +1617,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1157773863}
   m_CullTransparentMesh: 1
+--- !u!114 &1157773867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157773863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e4350eee2f6f14c963629b894777b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 1157773865}
 --- !u!1 &1165516803
 GameObject:
   m_ObjectHideFlags: 0
@@ -2115,7 +2157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bullet: {fileID: -3653363020577182431, guid: 14c74b007ee466845b311a4b1b81566f, type: 3}
   _speedBullet: 55
-  _text: {fileID: 1157773865}
+  _bulletIndicator: {fileID: 1157773867}
 --- !u!1 &2027980082
 GameObject:
   m_ObjectHideFlags: 0
