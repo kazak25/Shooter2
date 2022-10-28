@@ -8,17 +8,22 @@ public class EnemyController : MonoBehaviour
 {
     private CubeController _controller;
     private float _speed = 2;
+    [SerializeField]
+    private EnemyIndicator _enemyIndicator;
     
     // Start is called before the first frame update
     private void Start()
     {
         _controller = FindObjectOfType<CubeController>();
+        _enemyIndicator = FindObjectOfType<EnemyIndicator>();
     }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.gameObject.GetComponent<BulletBehavior>())
         {
+            
             Destroy(gameObject);
+            _enemyIndicator.whenEnemyDied();
             Destroy(collision.gameObject); //разрушаем пулю
         }
     }
