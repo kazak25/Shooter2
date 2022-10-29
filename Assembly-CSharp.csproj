@@ -41,16 +41,16 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\BulletBehavior.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
+     <Compile Include="Assets\Scripts\EnemyDieEvent.cs" />
      <Compile Include="Assets\Scripts\CubeController.cs" />
-     <Compile Include="Assets\Scripts\EnemyController.cs" />
      <Compile Include="Assets\Scripts\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\GunShooting.cs" />
-     <Compile Include="Assets\Scripts\EnemyIndicator.cs" />
      <Compile Include="Assets\Scripts\BulletIndicator.cs" />
      <Compile Include="Assets\Scripts\ShootEvent.cs" />
-     <Compile Include="Assets\Scripts\EnemyDieEvent.cs" />
+     <Compile Include="Assets\Scripts\BulletBehavior.cs" />
+     <Compile Include="Assets\Scripts\EnemyIndicator.cs" />
+     <Compile Include="Assets\Scripts\EnemyController.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

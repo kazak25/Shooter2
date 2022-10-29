@@ -8,12 +8,12 @@ using Random = UnityEngine.Random;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject _prefabEnemy;
-    public int _countEnemy=5;
+    public int _countEnemy;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        _countEnemy = Random.Range(4, 10);
          
         for (int i = 0; i < _countEnemy; i++)
         {
@@ -22,6 +22,11 @@ public class EnemySpawner : MonoBehaviour
             
         }
         
+    }
+
+    private int numberOfEnemies()
+    {
+        return _countEnemy;
     }
     
 
